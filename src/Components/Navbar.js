@@ -72,18 +72,19 @@ const Nav2 = () => {
       top:position - minus
     })
  }
- const scroll2 = (e)=>{
-    e.preventDefault();
-    const target = e.target.getAttribute('href');
-    const position = document.querySelector(target).offsetTop;
-    const minus = navRef.current.getBoundingClientRect().height;
-    window.scrollTo({
-      left:0,
-      top:position - minus
-    })
- }
+//  const scroll2 = (e)=>{
+//     e.preventDefault();
+//     const target = e.target.getAttribute('href');
+    
+//     const position = document.querySelector(target).offsetTop;
+//     const minus = navRef.current.getBoundingClientRect().height;
+//     window.scrollTo({
+//       left:0,
+//       top:position - minus
+//     })
+//  }
   return (
-    <header className='h-screen  bg-black z-0'>
+    <header id='home' className='h-screen  bg-black z-0'>
         <nav >
             <div ref ={navRef}  className=' flex justify-end w-full fixed md:hidden py-6 px-10  z-2  text-mainYellow z-10  top-0 left-0 bg-[rgba(0,0,0,0.2)] backdrop-blur bg-red-500 '>
                 <FaBars onClick={toggle} className='h-10 w-10 '/>
@@ -107,9 +108,9 @@ const Nav2 = () => {
                  
             {links.map((link)=>
              <li key={link.id} className='flex items-center justify-center h-16  bg-mainYellow drop-shadow-lg mb-6 w-[15rem] rounded-lg'>
-                    <a href={link.href} onClick={scroll2}>{link.icon}</a>
+                    <a href={link.href} onClick={scroll}>{link.icon}</a>
                     
-                    <a href={link.href} onClick={scroll2} className='pl-4 '>{link.name}</a>
+                    <a href={link.href} onClick={scroll} className='pl-4 '>{link.name}</a>
             </li>
             )}
           </ul>
