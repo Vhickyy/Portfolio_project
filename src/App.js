@@ -1,14 +1,18 @@
-import {Navbar,About, Portfolio, Contact, Footer,Reviews} from './Components/index'
+import About from './Components/About';
+import Contact from './Components/Contact';
+import Hero from './Components/Hero';
+import Portfolio from './Components/Portfolio';
+import Sections from './Components/Sections'
+import Youtube from './Components/Youtube';
 function App() {
   return (
-    <div className='md:absolute top-0 left-[30%]'>
-      <Navbar/>
+    <div className=''>
+      <Hero/>
       <About/>
       <Portfolio/>
-      <Reviews/>
+      <Youtube/>
       <Contact/>
-      <Footer/>
-      
+      <Sections/>
     </div>
   );
 }
